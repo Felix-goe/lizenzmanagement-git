@@ -14,9 +14,9 @@
 
     <div class="container min-vh-100 d-flex justify-content-center align-items-center">
 
-  <h1><b> Das ist die Homepage</b> </h1>
+  <h1><b> Das ist die Homepage   </b> </h1>
 
- <h2> <a href="/lizenzen_user">Lizenzen User</a> </h2>
+ <h2> <a href="/lizenzen_user">Lizenzen User  </a> </h2>
 
     </div>
 
