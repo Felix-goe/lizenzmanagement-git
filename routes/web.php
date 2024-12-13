@@ -7,6 +7,11 @@ Route::get('/', function () {
     return view('home');
 });
 
+#Route::get('/', function () {
+#    return view('welcome');
+
+# });
+
 Route::view('lizenzen_user','lizenzen_user');
 
 Route::get('/dashboard', function () {
