@@ -18,17 +18,11 @@
   <br>
   </div>
 
-<div class="container min-vh-100 d-flex justify-content-center align-items-center">
+<div class="container  d-flex justify-content-center align-items-center">
  <h2> <a href="/lizenzen_user">Lizenzen User  </a> </h2>
 </div>
  <br>
- <br>
- <br>
-<div class="container min-vh-100 d-flex justify-content-center align-items-center">
- <h2> <a href="/dashboard">Dashboard  </a> </h2>
 
-
- </div>
 
   </body>
 </html>
