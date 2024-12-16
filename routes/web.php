@@ -7,4 +7,5 @@ Route::get('/', function () {
 });
 
 
-Route::view('lizenzen_user','lizenzen_user');
+Route::view('/admin','admin');
+Route::view('/lizenzen', 'lizenzen_user');
