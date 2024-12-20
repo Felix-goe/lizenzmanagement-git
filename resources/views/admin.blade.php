@@ -123,7 +123,7 @@
                                                 <td>101</td>
                                                 <td>1234</td>
                                                 <td>Informatik</td>
-                                                <td>info@uni-goettingen.de</td>
+                                                <td></td>
                                                 <td>+49 123 456789</td>
                                                 <td>
                                                     <button id="edit1"><i
@@ -136,7 +136,7 @@
                                                 <td>102</td>
                                                 <td>5678</td>
                                                 <td>BWL</td>
-                                                <td>bwl@uni-goettingen.de</td>
+                                                <td></td>
                                                 <td>+49 987 654321</td>
                                                 <td>
                                                     <button id="edit2"><i
