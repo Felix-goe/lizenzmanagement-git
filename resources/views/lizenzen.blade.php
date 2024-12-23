@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Userverwaltung</title>
+    <title>Lizenzenverwaltung</title>
 
     <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -46,9 +46,6 @@
                     <span>Lizenzen</span>
                     </a>
                 </li>
-
-
-                <!-- Neuer Button für Userverwaltung -->
                 <li class="sidebar-item">
                     <a href="{{ url('/admin') }}" class="sidebar-link">
                         <i class="lni lni-users"></i>
@@ -86,67 +83,50 @@
             </nav>
 
             <main class="content px-3 py-4">
+
                 <div class="container-fluid">
                     <div class="mb-3">
-                        <h3 class="fw-bold fs-4 mb-3">Userverwaltung</h3>
 
 
-                        <!--Tabelle-->
-                        <div class="usertable">
-                            <div class="table_header">
-                                <p style="font-size:23px">Userverwaltung</p>
-                                <div>
-                                    <input type="text" name="" id="" placeholder="Büronummer">
-                                    <button class="add_new">Suchen</button>
-                                    <button class="add_new"
-                                        style="padding: 10px 20px; color: #ffffff ;background-color: #0298cf;"
-                                        data-bs-toggle="modal" data-bs-target="#addUserModal">
-                                        + Hinzufügen
-                                    </button>
-
+                        <!--PC Tabelle-->
+                                <div class="table">
+                                    <div class="table_header">
+                                        <p style="font-size:23px">Computer</p>
+                                    <div>
+                                        <input type="text" name="" id="" placeholder="Computer">
+                                        <button class="add_new" style="padding: 10px 20px; color: #ffffff; background-color: #0298cf;">Suchen</button>
+                                        <button id="pcHinzufügen" class="add_new" style="padding: 10px 20px; color: #ffffff; background-color: #0298cf;">+ PC Hinzufügen</button>
+                                    </div>
+                                    </div>
                                 </div>
-                            </div>
                                 <div class="table_section">
-                                    <table>
-                                        <thead>
-                                            <tr>
-                                                <th>Büronummer</th>
-                                                <th>Sekretariat-ID</th>
-                                                <th>Lehrstuhl</th>
-                                                <th>Email</th>
-                                                <th>Telefonnummer</th>
-                                                <th>Aktion</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>101</td>
-                                                <td>1234</td>
-                                                <td>Informatik</td>
-                                                <td>info@uni-goettingen.de</td>
-                                                <td>+49 123 456789</td>
-                                                <td>
-                                                    <button id="edit1"><i
-                                                            class="fa-solid fa-pen-to-square"></i></button>
-                                                    <button id="delete1"><i
-                                                            class="fa-solid fa-delete-left"></i></button>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>102</td>
-                                                <td>5678</td>
-                                                <td>BWL</td>
-                                                <td>bwl@uni-goettingen.de</td>
-                                                <td>+49 987 654321</td>
-                                                <td>
-                                                    <button id="edit2"><i
-                                                            class="fa-solid fa-pen-to-square"></i></button>
-                                                    <button id="delete2"><i
-                                                            class="fa-solid fa-delete-left"></i></button>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>PC-ID</th>
+                                            <th>Büronummer</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>0001</td>
+                                            <td>1</td>
+                                        </tr>
+                                        <tr>
+                                            <td>0002</td>
+                                            <td>2</td>
+                                        </tr>
+                                        <tr>
+                                            <td>0003</td>
+                                            <td>3</td>
+                                        </tr>
+                                        <tr>
+                                            <td>0004</td>
+                                            <td>4</td>
+                                        </tr>
+                                        <tr>
+                                    </tbody>
+                                </table>
                                 </div>
                             
 
@@ -159,6 +139,201 @@
                                 <div>2</div>
                                 <div><i class="fa-solid fa-angles-right" style="color: #ffffff;"></i></div>
                                 <div><i class="fa-solid fa-angle-right" style="color: #ffffff;"></i></div>
+                            </div>
+                        </div>
+                        
+                        <!--Zweite Tabelle-->
+
+                        <div class="table">
+                            <div class="table_header">
+                                <p style="font-size:23px">Lizenzenverwaltung</p>
+                                <div>
+                                    <input type="text" name="" id="" placeholder="Lizenzname">
+                                    <button class="add_new"
+                                        style="padding: 10px 20px; color: #ffffff ;background-color: #0298cf;">Suchen</button>
+                                    <button class="add_new"
+                                        style="padding: 10px 20px; color: #ffffff ;background-color: #0298cf;"
+                                        id="hinzufügen">+ Hinzufügen</button>
+                                </div>
+                            </div>
+                            </div>
+                                <div class="table_section">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Lizen-ID</th>
+                                            <th>Software</th>
+                                            <th>Lizenbeginn</th>
+                                            <th>Lizenablauf</th>
+                                            <th>Restlaufzeit</th>
+                                            <th>Kundennummer</th>
+                                            <th>Rechung</th>
+                                            <th>Status</th>
+                                            <th>Aktion</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>0001</td>
+                                            <td>Microsoft Word</td>
+                                            <td>15.11.2024</td>
+                                            <td>16.11.2024</td>
+                                            <td>&lt 1 Monat</td>
+                                            <td>123456789</td>
+                                            <td style="color: blue;"><a href="[Verweisziel]"
+                                                    target="[Öffnungsart]">Rechung.png</a></td>
+                                            <td>Aktiv</td>
+                                            <td>
+                                                <button><i class="fa-solid fa-pen-to-square"></i></button>
+                                                <button id="löschen1"><i class="fa-solid fa-delete-left"></i></button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>0002</td>
+                                            <td>Microsoft Word</td>
+                                            <td>15.11.2024</td>
+                                            <td>16.11.2024</td>
+                                            <td>&lt 1 Monat</td>
+                                            <td>123456789</td>
+                                            <td style="color: blue;"><a href="[Verweisziel]"
+                                                    target="[Öffnungsart]">Rechung.png</a></td>
+                                            <td>Aktiv</td>
+                                            <td>
+                                                <button><i class="fa-solid fa-pen-to-square"></i></button>
+                                                <button id="löschen2"><i class="fa-solid fa-delete-left"></i></button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>0003</td>
+                                            <td>Microsoft Word</td>
+                                            <td>15.11.2024</td>
+                                            <td>16.11.2024</td>
+                                            <td>&lt 1 Monat</td>
+                                            <td>123456789</td>
+                                            <td style="color: blue;"><a href="[Verweisziel]"
+                                                    target="[Öffnungsart]">Rechung.png</a></td>
+                                            <td>Aktiv</td>
+                                            <td>
+                                                <button><i class="fa-solid fa-pen-to-square"></i></button>
+                                                <button id="löschen3"><i class="fa-solid fa-delete-left"></i></button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>0004</td>
+                                            <td>Microsoft Word</td>
+                                            <td>15.11.2024</td>
+                                            <td>16.11.2024</td>
+                                            <td>&lt 1 Monat</td>
+                                            <td>123456789</td>
+                                            <td style="color: blue;"><a href="[Verweisziel]"
+                                                    target="[Öffnungsart]">Rechung.png</a></td>
+                                            <td>Aktiv</td>
+                                            <td>
+                                                <button><i class="fa-solid fa-pen-to-square"></i></button>
+                                                <button id="löschen4"><i class="fa-solid fa-delete-left"></i></button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>0005</td>
+                                            <td>Microsoft Word</td>
+                                            <td>15.11.2024</td>
+                                            <td>16.11.2024</td>
+                                            <td>&lt 1 Monat</td>
+                                            <td>123456789</td>
+                                            <td style="color: blue;"><a href="[Verweisziel]"
+                                                    target="[Öffnungsart]">Rechung.png</a></td>
+                                            <td>Aktiv</td>
+                                            <td>
+                                                <button><i class="fa-solid fa-pen-to-square"></i></button>
+                                                <button id="löschen5"><i class="fa-solid fa-delete-left"></i></button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>0006</td>
+                                            <td>Microsoft Word</td>
+                                            <td>15.11.2024</td>
+                                            <td>16.11.2024</td>
+                                            <td>&lt 1 Monat</td>
+                                            <td>123456789</td>
+                                            <td style="color: blue;"><a href="[Verweisziel]"
+                                                    target="[Öffnungsart]">Rechung.png</a></td>
+                                            <td>Aktiv</td>
+                                            <td>
+                                                <button><i class="fa-solid fa-pen-to-square"></i></button>
+                                                <button id="löschen6"><i class="fa-solid fa-delete-left"></i></button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>0007</td>
+                                            <td>Microsoft Word</td>
+                                            <td>15.11.2024</td>
+                                            <td>16.11.2024</td>
+                                            <td>&lt 1 Monat</td>
+                                            <td>123456789</td>
+                                            <td style="color: blue;"><a href="[Verweisziel]"
+                                                    target="[Öffnungsart]">Rechung.png</a></td>
+                                            <td>Aktiv</td>
+                                            <td>
+                                                <button><i class="fa-solid fa-pen-to-square"></i></button>
+                                                <button id="löschen7"><i class="fa-solid fa-delete-left"></i></button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>0008</td>
+                                            <td>Microsoft Word</td>
+                                            <td>15.11.2024</td>
+                                            <td>16.11.2024</td>
+                                            <td>&lt 1 Monat</td>
+                                            <td>123456789</td>
+                                            <td style="color: blue;"><a href="[Verweisziel]"
+                                                    target="[Öffnungsart]">Rechung.png</a></td>
+                                            <td>Aktiv</td>
+                                            <td>
+                                                <button><i class="fa-solid fa-pen-to-square"></i></button>
+                                                <button id="löschen8"><i class="fa-solid fa-delete-left"></i></button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                </div>
+                            
+
+
+                            <div class="pagination">
+                                <div><i class="fa-solid fa-angles-left" style="color: #ffffff;"></i></div>
+                                <div><i class="fa-solid fa-angle-left" style="color: #ffffff;"></i></div>
+                                <div style="background-color: #0e2238;">1</div>
+                                <!--Hier nur für Mockup den Button verfärbt damit man sieht das das grade Seite 1 ist-->
+                                <div>2</div>
+                                <div><i class="fa-solid fa-angles-right" style="color: #ffffff;"></i></div>
+                                <div><i class="fa-solid fa-angle-right" style="color: #ffffff;"></i></div>
+                            </div>
+                        </div>
+
+                        <div class="modal" tabindex="-1" id="addPC" role="dialog">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title">PC Hinzufügen</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close" id="hinzufügenXBtnPC">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body" style="align-items: center;">
+                                        <div class="form-group">
+                                            <label>PC-ID</label>
+                                            <input type="text" class="form-control" style="margin-left: auto;">
+                                        </div>
+                                        <div class="form-group" style="margin-top: 5px;">
+                                            <label>Büronummer</label>
+                                            <input type="text" class="form-control" required style="margin-left: auto;">
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn close blue-btn" id="pcHinzufügenModal">Hinzufügen</button>
+                                        <button type="button" class="btn close red-btn" id="pcAbbrechenBtn" data-dismiss="modal">Abbrechen</button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
@@ -396,13 +571,6 @@
         crossorigin="anonymous"></script>
         <script src="{{ asset('js/script.js') }}"></script>
 
-
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="js/jquery-3.3.1.slim.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery-3.3.1.min.js"></script>
 </body>
 
 </html>

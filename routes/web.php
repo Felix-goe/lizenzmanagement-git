@@ -8,4 +8,4 @@ Route::get('/', function () {
 
 
 Route::view('/admin','admin');
-Route::view('/lizenzen', 'lizenzen_user');
+Route::view('/lizenzen', 'lizenzen');

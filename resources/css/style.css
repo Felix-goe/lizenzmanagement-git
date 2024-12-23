@@ -17,24 +17,36 @@ li {
     list-style: none;
 }
 
+html, body {
+    height: 100%;
+    margin: 0;
+    overflow-y: auto; /* Globale Scrollbar */
+}
+
+
+
 body {
     font-family: 'Poppins', sans-serif;
+    overflow-y: auto; /* Scrollbar nur bei Bedarf */
 }
 
 .wrapper {
     display: flex;
+    flex-direction: column;
+    height: 100%;
 }
+
 
 .main {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
     width: 100%;
-    overflow: hidden;
-    transition: all 0.35s ease-in-out;
+    /* overflow-y: auto; <-- Das hier entfernen */
     background-color: #fff;
     min-width: 0;
 }
+
 
 #sidebar {
     width: 70px;
@@ -336,3 +348,11 @@ a.sidebar-link:hover {
     width: calc(33.333% - (2rem / 3));
     object-fit: contain;
 }
+
+#pcHinzufügen {
+    position: relative;
+    z-index: 9999;
+    pointer-events: auto;
+}
+
+

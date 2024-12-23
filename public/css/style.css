@@ -15,9 +15,11 @@ li {
     list-style: none;
 }
 
-body {
-    font-family: 'Poppins', sans-serif;
+html, body {
+    height: 100% !important;
+    overflow-y: auto !important;
 }
+
 
 .wrapper {
     display: flex;
