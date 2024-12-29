@@ -8,7 +8,7 @@ Route::get('/', function () {
 });
 
 Route::view('/admin', 'admin');
-Route::get('/lizenzen', [ComputerController::class, 'index'])->name('lizenz');
-Route::post('/lizenzen/speichern', [ComputerController::class, 'speichern']);
-Route::post('/lizenzen/löschen', [ComputerController::class, 'löschen']);
+Route::get('/computer', [ComputerController::class, 'index']);
+Route::post('/computer/speichern', [ComputerController::class, 'speichern']);
+Route::post('/computer/löschen', [ComputerController::class, 'löschen']);
 

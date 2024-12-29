@@ -151,7 +151,7 @@
                                             <span aria-hidden="true">&times;</span>
                                         </button>
                                     </div>
-                                    <form action="/lizenzen/speichern" method="Post">
+                                    <form action="/computer/speichern" method="Post">
                                         @csrf
                                         <div class="modal-body" style="align-items: center;">
                                             <div class="form-group">
@@ -196,7 +196,7 @@
                                         <!-- Abbrechen Button -->
                                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Abbrechen</button>
                                         <!-- Löschen Button -->
-                                        <form id="deleteForm" action="/lizenzen/löschen" method="POST">
+                                        <form id="deleteForm" action="/computer/löschen" method="POST">
                                             @csrf
                                             <input type="hidden" name="computerID" id="computerIDToDelete">
                                             <button type="submit" class="btn btn-danger">Löschen</button>

@@ -12,7 +12,7 @@ class ComputerController extends Controller
     {
         $computers = DB::table('computers')->paginate();
 
-        return view('lizenzen_user', [
+        return view('computer', [
             'computers' => $computers
         ]);
     }
@@ -24,13 +24,13 @@ class ComputerController extends Controller
         $meinComputer->bueronummer = $request->bueronummer;
         $meinComputer->save();
 
-        return redirect()->route('lizenz');
+        return redirect('/computer');
     }
 
     public function löschen(Request $request)
     {
         DB::table('computers')->where('id',$request->computerID)->delete();
-        return redirect()->route('lizenz');
+        return redirect('/computer');
     }
 
 }

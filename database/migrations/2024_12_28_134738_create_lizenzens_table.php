@@ -13,6 +13,17 @@ return new class extends Migration
     {
         Schema::create('lizenzens', function (Blueprint $table) {
             $table->id();
+            $table->string('lizenz_id');
+            $table->string('lizenbeginn');
+            $table->string('lizenende');
+            $table->string('software');
+            $table->string('kundennummer');
+            $table->string('kontakt_hersteller');
+            $table->string('status');
+            $table->string('rechnung');
+            $table->string('lizenschlüssel');
+            $table->string('beschreibung');
+            $table->string('kaufender_mitarbeiter');
             $table->timestamps();
         });
     }
