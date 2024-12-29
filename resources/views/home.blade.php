@@ -19,7 +19,7 @@
   </div>
 
 <div class="container  d-flex justify-content-center align-items-center">
- <h2> <a href="/admin">Admins  </a> </h2>
+  <h2><a href="/lizenzen">Zu den Lizenzen</a></h2>
 </div>
  <br>
 
