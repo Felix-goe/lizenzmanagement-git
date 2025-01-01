@@ -17,6 +17,13 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+            $table->enum('role',['admin','user'])->default('user');
+            $table->enum('status',['active','inactive'])->default('inactive');
+            $table->string('sekretariat_id')->nullable(); // Neue Spalte für SekretariatID
+            $table->foreign('sekretariat_id') // Fremdschlüssel hinzufügen
+                    ->references('SekretariatID') // Verweist auf die SekretariatID in der Tabelle sekretariat
+                    ->on('sekretariat')
+                    ->onDelete('set null');
             $table->rememberToken();
             $table->timestamps();
         });

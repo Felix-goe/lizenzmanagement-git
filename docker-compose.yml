@@ -1,4 +1,13 @@
 services:
+    phpmyadmin:
+        image: phpmyadmin/phpmyadmin
+        container_name: phpmyadmin
+        restart: always
+        environment:
+            PMA_HOST: lizenzmanagement-git-mysql-1
+            MYSQL_ROOT_PASSWORD: password
+        ports:
+            - "8080:80"
     laravel.test:
         build:
             context: './vendor/laravel/sail/runtimes/8.4'
@@ -110,3 +119,4 @@ volumes:
         driver: local
     sail-meilisearch:
         driver: local
+

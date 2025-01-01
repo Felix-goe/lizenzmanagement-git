@@ -28,38 +28,6 @@ document.addEventListener("DOMContentLoaded", function () {
         modalHinzufügen.style.display = "none";
     };
 
-    // PC Hinzufügen Modal
-    const pcModal = document.getElementById("addPC");
-    const pcHinzufügenBtn = document.getElementById("pcHinzufügen");
-    const pcAbbrechenBtn = document.getElementById("pcAbbrechenBtn");
-    const pcHinzufügenModalBtn = document.getElementById("pcHinzufügenModal");
-    const pcXBtn = document.getElementById("hinzufügenXBtnPC");
-
-    // Öffnen des Modals
-    if (pcHinzufügenBtn) {
-        pcHinzufügenBtn.addEventListener("click", () => {
-            pcModal.style.display = "block";
-            console.log("PC Hinzufügen Modal geöffnet.");
-        });
-    } else {
-        console.error("Button 'pcHinzufügen' wurde nicht gefunden.");
-    }
-
-    // Schließen des Modals (Abbrechen oder X)
-    if (pcAbbrechenBtn) {
-        pcAbbrechenBtn.addEventListener("click", () => {
-            pcModal.style.display = "none";
-            console.log("PC Hinzufügen Modal geschlossen (Abbrechen).");
-        });
-    }
-
-    if (pcXBtn) {
-        pcXBtn.addEventListener("click", () => {
-            pcModal.style.display = "none";
-            console.log("PC Hinzufügen Modal geschlossen (X-Button).");
-        });
-    }
-
     // Schließen bei Klick außerhalb des Modals
     window.addEventListener("click", (event) => {
         if (event.target === pcModal) {
